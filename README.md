@@ -7,10 +7,19 @@ We need to define two pins to activate I2C functions based on those (clock and d
 #define I2C_SCL 3 // SCL Connected to GPIO 3
 TwoWire I2CSensors = TwoWire(0);
 ```
-finally, In the setup, initialize the I2C communication with the pins that we defined earlier (GIPO1 and GPIO3). The third parameter is the clock frequency:
+Then, In the setup, initialize the I2C communication with the pins that we defined earlier (GIPO1 and GPIO3). The third parameter is the clock frequency:
 
 ```
 I2CSensors.begin(I2C_SDA, I2C_SCL, 100000);
 ```
+Finally, initialize object with your sensor address and your TwoWire object!
+
+```
+if (! mlx.begin(0x33, &I2CSensors)) {
+ //   Serial.println("MLX90640 not found!"); Commented because we cannot use UART since the pins are used for MLX now!
+    while (1) delay(10);
+  }
+```
+
 ### 2- Read the data from both RGB and thermal cameras continuously
 ### 3- Store the collected data into the SD card
