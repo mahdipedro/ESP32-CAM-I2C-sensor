@@ -14,8 +14,8 @@
  
 
 
-#define I2C_SDA 1 // SDA Connected to GPIO 14
-#define I2C_SCL 3 // SCL Connected to GPIO 15
+#define I2C_SDA 1 // SDA Connected to GPIO 1
+#define I2C_SCL 3 // SCL Connected to GPIO 3
 TwoWire I2CSensors = TwoWire(0);
 //Adafruit_VCNL4010 vcnl;
 File myFile;
