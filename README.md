@@ -5,7 +5,11 @@ We need to define two pins to activate I2C functions based on those (clock and d
 
 ![ESP32](https://user-images.githubusercontent.com/45086751/166619952-ab1e3956-f4c5-4df9-8a16-346f8e809a74.jpg)
 
-
+  <p align="center">
+  <img width="360" height="310" src="https://user-images.githubusercontent.com/45086751/166619952-ab1e3956-f4c5-4df9-8a16-346f8e809a74.jpg">
+  </p> 
+  
+  
 The selected pins are initially used for UART communication which is useful if you want to connect the board to your computer or any other platform using UART. However, we did not need the communication since the device was supposed to collect RGB and thermal data continuously and store the data on the SD card. Therefore, you can change the fincionality of these two pins to I2C protocol. The following code will change the functionality of the two mentioned pins and then we define our I2C bus:
 ```
 #define I2C_SDA 1 // SDA Connected to GPIO 1
