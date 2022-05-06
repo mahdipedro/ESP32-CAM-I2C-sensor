@@ -3,10 +3,9 @@ I will show you how to take pictures from the ESP32-CAM camera and MLX90640 ther
 ### 1- Activating software I2C for MLX90640
 We need to define two pins to activate I2C functions based on those (clock and data). According to ESP32S datasheet (https://www.es.co.th/Schemetic/PDF/ESP32.PDF), any GIPO pins can be used for I2C function. As a result, I selected GPIO1 and GPIO3 because we use other pins for the camera and SPI protocol which is required for writing the data into the SD card. 
 
-![ESP32](https://user-images.githubusercontent.com/45086751/166619952-ab1e3956-f4c5-4df9-8a16-346f8e809a74.jpg)
 
   <p align="center">
-  <img width="360" height="310" src="https://user-images.githubusercontent.com/45086751/166619952-ab1e3956-f4c5-4df9-8a16-346f8e809a74.jpg">
+  <img width="500" height="360" src="https://user-images.githubusercontent.com/45086751/166619952-ab1e3956-f4c5-4df9-8a16-346f8e809a74.jpg">
   </p> 
   
   
